@@ -1,0 +1,19 @@
+/* بسم الله الرحمن الرحيم */
+
+.row-card{
+    border-radius: 7px;
+}
+.col-card{
+    position: relative;
+
+
+}
+.img-hover{
+    opacity: 0;
+    margin: 0 12px;
+}
+.img-hover:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+/* الحمد لله  رب العالمين */

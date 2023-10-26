@@ -1,14 +1,16 @@
 /* بسم الله الرحمن الرحيم */
 
-
 import {Container, Form, Navbar} from "react-bootstrap";
+import logo from "../images/logo.jpg";
+import {Link} from "react-router-dom";
 
-function NavBar() {
+function NavBar({handleSubmit}) {
+
     return(
-            <Navbar expand="lg" className="bg-black">
-                <Container>
-                    <Navbar.Brand href="#">
-                        <img src="./logo.jpg" alt="logo" width={100} className="bg-dark"/>
+            <Navbar className="bg-dark">
+                <Container style={{padding: "0"}}>
+                    <Navbar.Brand href="#" style={{marginRight: "0"}}>
+                        <Link to='/'><img src={logo} alt="logo" width={100} className="bg-dark"/></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
@@ -18,8 +20,10 @@ function NavBar() {
                                 placeholder="Search"
                                 className="me-2 search"
                                 aria-label="Search"
+                                onChange={(e) => handleSubmit(e.target.value)}
                             />
-                            <i className="fa-solid fa-magnifying-glass position-absolute start-0 top-0 mt-2 ms-2 fs-4"></i>                        </Form>
+                            <i className="fa-solid fa-magnifying-glass position-absolute start-0 top-0 mt-2 ms-2 fs-4"></i>
+                        </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
